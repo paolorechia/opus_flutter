@@ -7,6 +7,6 @@ import 'package:opus_flutter_platform_interface/opus_flutter_platform_interface.
 class OpusFlutterMacOS extends OpusFlutterPlatform {
   /// Opens the opus library for macOS.
   Future<dynamic> load() async {
-    return DynamicLibrary.open('libopus.0.dylib');
+    return DynamicLibrary.process();
   }
 }
