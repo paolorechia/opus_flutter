@@ -13,10 +13,11 @@ Pod::Spec.new do |s|
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'EPNW GmbH' => 'contact@epnw.eu' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'Classes/**/*', 'Libraries/*.h'
+  s.public_header_files = 'Libraries/*.h'
   s.dependency 'FlutterMacOS'
   s.platform = :osx, '10.15'
-  s.vendored_frameworks = 'Frameworks/opus.framework'
+  s.vendored_libraries = 'Libraries/libopus.a'
   
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
   s.swift_version = '5.1'
